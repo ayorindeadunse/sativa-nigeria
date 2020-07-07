@@ -1,4 +1,4 @@
-import { AngularFireAuth } from "@angular/fire/auth";
+import { AuthService } from "./../auth.service";
 import { Component } from "@angular/core";
 import * as firebase from "firebase";
 
@@ -8,15 +8,16 @@ import * as firebase from "firebase";
   styleUrls: ["./bs-navbar.component.css"],
 })
 export class BsNavbarComponent {
-  user: firebase.User;
-  constructor(private afAuth: AngularFireAuth) {
+  // make variable an Observable by using dollar sign
+  constructor(public auth: AuthService) {
     // authstate is an Observable which represents the authentication
     // state of the current user, so we can just subscribe to it.
-
-    afAuth.authState.subscribe((user) => (this.user = user));
+    // unwrap Observable in our template using the async pipe.
+    // this pipe will automatically unsubscribe from the Observable
+    // when the component is destroyed.
   }
 
   logout() {
-    this.afAuth.signOut();
+    this.auth.logout();
   }
 }
