@@ -1,3 +1,5 @@
+import { AdminAuthGuard } from "./admin-auth-guard.service";
+import { UserService } from "./user.service";
 import { AuthGuard } from "./auth-guard.service";
 import { AuthService } from "./auth.service";
 import { LoginComponent } from "./login/login.component";
@@ -60,12 +62,12 @@ import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
       {
         path: "admin/products",
         component: AdminProductsComponent,
-        canActivate: [AuthGuard],
+        canActivate: [AuthGuard, AdminAuthGuard],
       },
       {
         path: "admin/orders",
         component: AdminOrdersComponent,
-        canActivate: [AuthGuard],
+        canActivate: [AuthGuard, AdminAuthGuard],
       },
       {
         path: "my/orders",
@@ -75,7 +77,7 @@ import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
     ]),
     NgbModule,
   ],
-  providers: [AuthService, AuthGuard],
+  providers: [AuthService, AuthGuard, UserService, AdminAuthGuard],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
