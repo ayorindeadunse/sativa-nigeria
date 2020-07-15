@@ -22,6 +22,7 @@ import { MyOrdersComponent } from "./my-orders/my-orders.component";
 import { AdminProductsComponent } from "./admin/admin-products/admin-products.component";
 import { AdminOrdersComponent } from "./admin/admin-orders/admin-orders.component";
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
+import { ProductFormComponent } from "./admin/product-form/product-form.component";
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
     AdminProductsComponent,
     AdminOrdersComponent,
     LoginComponent,
+    ProductFormComponent,
   ],
   imports: [
     BrowserModule,
@@ -58,7 +60,11 @@ import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
         component: OrderSuccessComponent,
         canActivate: [AuthGuard],
       },
-
+      {
+        path: "admin/products/new",
+        component: ProductFormComponent,
+        canActivate: [AuthGuard, AdminAuthGuard],
+      },
       {
         path: "admin/products",
         component: AdminProductsComponent,
