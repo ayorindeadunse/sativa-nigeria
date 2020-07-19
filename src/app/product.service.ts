@@ -34,10 +34,18 @@ export class ProductService {
         )
       );
   }
-
+  // get product by id
   get(productId) {
     //
     return this.db.object("/products/" + productId).valueChanges();
   }
-  // get product by id
+
+  update(productID, product) {
+    return this.db.object("/products/" + productID).update(product);
+  }
+
+  // delete
+  delete(productId) {
+    return this.db.object("/products/" + productId).remove();
+  }
 }
