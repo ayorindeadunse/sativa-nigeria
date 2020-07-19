@@ -31,6 +31,8 @@ export class ProductFormComponent implements OnInit {
           console.log(this.product);
         });
     }
+
+    //set product object to null to avoid errors from pulling a nullable object from the database on page load.
     this.product = {};
   }
 
