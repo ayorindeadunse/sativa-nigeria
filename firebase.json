@@ -1,0 +1,6 @@
+{
+  "hosting": {
+    "public": "dist/sativa-ngr",
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
+  }
+}
