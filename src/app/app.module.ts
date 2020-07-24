@@ -53,7 +53,7 @@ import { DataTablesModule } from "angular-datatables";
     AngularFireAuthModule,
     AngularFireDatabaseModule,
     RouterModule.forRoot([
-      { path: "", component: HomeComponent },
+      { path: "", component: ProductsComponent },
       { path: "products", component: ProductsComponent },
       { path: "shopping-cart", component: ShoppingCartComponent },
       { path: "login", component: LoginComponent },
