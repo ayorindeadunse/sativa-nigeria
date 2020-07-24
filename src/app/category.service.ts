@@ -12,7 +12,7 @@ export class CategoryService {
     return this.db.list("/categories").snapshotChanges();
   } */
 
-  getCategories() {
+  getAll() {
     return this.db
       .list("/categories", (query) => query.orderByChild("name"))
       .snapshotChanges()
