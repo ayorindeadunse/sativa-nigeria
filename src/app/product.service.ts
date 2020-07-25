@@ -1,3 +1,5 @@
+import { Observable } from "rxjs";
+import { Product } from "./models/Product";
 import { Injectable } from "@angular/core";
 import { AngularFireDatabase } from "@angular/fire/database";
 import { map } from "rxjs/operators";
@@ -8,18 +10,9 @@ import { map } from "rxjs/operators";
 export class ProductService {
   constructor(private db: AngularFireDatabase) {}
 
-  /*create(product) {
-    return this.db.list("/products").push(product);
-  }*/
-
   create(product) {
     return this.db.list("/products/").push(product);
   }
-
-  // Get all products
-  /* getAll() {
-    return this.db.list("/products");
-  }*/
 
   getAll() {
     return this.db
@@ -34,6 +27,7 @@ export class ProductService {
         )
       );
   }
+
   // get product by id
   get(productId) {
     //

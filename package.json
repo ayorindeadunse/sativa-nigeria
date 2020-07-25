@@ -26,6 +26,7 @@
     "bootstrap": "^4.5.0",
     "datatables.net": "^1.10.20",
     "datatables.net-dt": "^1.10.20",
+    "es6-promise": "^4.2.8",
     "firebase": "^7.15.5",
     "firebase-tools": "^8.4.3",
     "g": "^2.0.1",
