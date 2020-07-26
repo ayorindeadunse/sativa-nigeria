@@ -1,5 +1,3 @@
-import { Observable } from "rxjs";
-import { Product } from "./models/Product";
 import { Injectable } from "@angular/core";
 import { AngularFireDatabase } from "@angular/fire/database";
 import { map } from "rxjs/operators";
