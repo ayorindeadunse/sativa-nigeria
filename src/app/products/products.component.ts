@@ -1,4 +1,3 @@
-import { CategoryService } from "./../category.service";
 import { ProductService } from "./../product.service";
 import { Component, OnInit } from "@angular/core";
 import { ActivatedRoute } from "@angular/router";
@@ -12,15 +11,11 @@ import "rxjs/add/operator/switchMap";
 })
 export class ProductsComponent {
   category: string;
-  categories$;
+
   products = [];
   filteredProducts: Product[] = [];
 
-  constructor(
-    route: ActivatedRoute,
-    productService: ProductService,
-    categoryService: CategoryService
-  ) {
+  constructor(route: ActivatedRoute, productService: ProductService) {
     // Use the switchMap operator to switch between observables
     productService
       .getAll()
@@ -34,8 +29,6 @@ export class ProductsComponent {
           ? this.products.filter((p) => p.category === this.category)
           : this.products;
       });
-
-    this.categories$ = categoryService.getAll();
   }
   /*async ngOnInit() {
     // this.cart$ = await this.cartService.getCart();

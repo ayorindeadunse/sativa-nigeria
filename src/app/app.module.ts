@@ -27,6 +27,7 @@ import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 import { ProductFormComponent } from "./admin/product-form/product-form.component";
 import { FormsModule } from "@angular/forms";
 import { DataTablesModule } from "angular-datatables";
+import { ProductFilterComponent } from './products/product-filter/product-filter.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +43,7 @@ import { DataTablesModule } from "angular-datatables";
     AdminOrdersComponent,
     LoginComponent,
     ProductFormComponent,
+    ProductFilterComponent,
   ],
   imports: [
     BrowserModule,
