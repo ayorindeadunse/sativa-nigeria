@@ -21,15 +21,20 @@ export class ProductsComponent {
     productService: ProductService,
     categoryService: CategoryService
   ) {
-    productService.getAll().subscribe((products) => {
-      this.products = products;
-      route.queryParamMap.subscribe((params) => {
+    // Use the switchMap operator to switch between observables
+    productService
+      .getAll()
+      .switchMap((products) => {
+        this.products = products;
+        return route.queryParamMap;
+      })
+      .subscribe((params) => {
         this.category = params.get("category");
         this.filteredProducts = this.category
           ? this.products.filter((p) => p.category === this.category)
           : this.products;
       });
-    });
+
     this.categories$ = categoryService.getAll();
   }
   /*async ngOnInit() {
