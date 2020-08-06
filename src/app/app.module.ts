@@ -1,3 +1,4 @@
+import { ShoppingCartService } from "./shopping-cart.service";
 import { ProductService } from "./product.service";
 import { CategoryService } from "./category.service";
 import { AdminAuthGuard } from "./admin-auth-guard.service";
@@ -27,8 +28,8 @@ import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 import { ProductFormComponent } from "./admin/product-form/product-form.component";
 import { FormsModule } from "@angular/forms";
 import { DataTablesModule } from "angular-datatables";
-import { ProductFilterComponent } from './products/product-filter/product-filter.component';
-import { ProductCardComponent } from './product-card/product-card.component';
+import { ProductFilterComponent } from "./products/product-filter/product-filter.component";
+import { ProductCardComponent } from "./product-card/product-card.component";
 
 @NgModule({
   declarations: [
@@ -106,6 +107,7 @@ import { ProductCardComponent } from './product-card/product-card.component';
     AdminAuthGuard,
     CategoryService,
     ProductService,
+    ShoppingCartService,
   ],
   bootstrap: [AppComponent],
 })
