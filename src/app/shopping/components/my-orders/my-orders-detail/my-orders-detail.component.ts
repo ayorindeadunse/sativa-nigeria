@@ -1,13 +1,13 @@
-import { Component } from "@angular/core";
 import { ActivatedRoute } from "@angular/router";
+import { Component, OnInit } from "@angular/core";
 import { OrderService } from "src/app/shared/services/order.service";
 
 @Component({
-  selector: "admin-order-details",
-  templateUrl: "./admin-order-details.component.html",
-  styleUrls: ["./admin-order-details.component.css"],
+  selector: "app-my-orders-detail",
+  templateUrl: "./my-orders-detail.component.html",
+  styleUrls: ["./my-orders-detail.component.css"],
 })
-export class AdminOrderDetailsComponent {
+export class MyOrdersDetailComponent implements OnInit {
   id;
   product$;
 
@@ -15,6 +15,7 @@ export class AdminOrderDetailsComponent {
     this.id = route.snapshot.paramMap.get("id");
     if (this.id) orderService.getSingleOrder(this.id).take(1).subscribe();
   }
+
   async ngOnInit() {
     this.product$ = await this.orderService.getSingleOrder(this.id).take(1);
   }

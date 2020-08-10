@@ -2,7 +2,6 @@ import { NgModule } from "@angular/core";
 import { RouterModule } from "@angular/router";
 import { AuthGuard } from "src/app/shared/services/auth-guard.service";
 import { SharedModule } from "src/app/shared/shared.module";
-
 import { AdminOrderDetailsComponent } from "./components/admin-orders/admin-order-details/admin-order-details.component";
 import { AdminOrdersComponent } from "./components/admin-orders/admin-orders.component";
 import { AdminProductsComponent } from "./components/admin-products/admin-products.component";

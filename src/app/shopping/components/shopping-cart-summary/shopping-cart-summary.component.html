@@ -8,7 +8,7 @@
       <li *ngFor="let item of cart.items" class="list-group-item">
         {{ item.quantity }} x {{ item.title }}
         <div class="float-right">
-          {{ item.totalPrice | currency: "NGN":true }}
+          {{ item.totalPrice | currency: "&#8358;":true }}
         </div>
       </li>
       <li class="list-group-item font-weight-bold">
