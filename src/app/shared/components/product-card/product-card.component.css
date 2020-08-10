@@ -1,0 +1,13 @@
+.card {
+  margin-bottom: 30px;
+  border-radius: 5px;
+}
+.card-footer {
+  padding: 0;
+}
+.thumbnail {
+  width: 395px;
+  height: 300px;
+  background-size: cover;
+  border-radius: 5px;
+}
