@@ -1,8 +1,8 @@
 import { NgModule } from "@angular/core";
 import { RouterModule } from "@angular/router";
 
-import { HomeComponent } from "../home/home.component";
-import { LoginComponent } from "../login/login.component";
+import { HomeComponent } from "src/app/core/components/home/home.component";
+import { LoginComponent } from "src/app/core/components/login/login.component";
 import { BsNavbarComponent } from "./components/bs-navbar/bs-navbar.component";
 import { SharedModule } from "src/app/shared/shared.module";
 

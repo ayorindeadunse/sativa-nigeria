@@ -11,10 +11,14 @@ import { ShoppingCartSummaryComponent } from "./components/shopping-cart-summary
 import { ShoppingCartComponent } from "./components/shopping-cart/shopping-cart.component";
 import { ShippingFormComponent } from "./components/shipping-form/shipping-form.component";
 import { MyOrdersDetailComponent } from "./components/my-orders/my-orders-detail/my-orders-detail.component";
+import { CommonModule } from "@angular/common";
+import { FormsModule } from "@angular/forms";
 
 @NgModule({
   imports: [
     SharedModule,
+    FormsModule,
+    CommonModule,
     RouterModule.forChild([
       { path: "shopping-cart", component: ShoppingCartComponent },
       {
