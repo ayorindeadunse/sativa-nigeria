@@ -1,4 +1,3 @@
-import { CommonModule } from "@angular/common";
 import { NgModule } from "@angular/core";
 import { RouterModule } from "@angular/router";
 import { AuthGuard } from "src/app/shared/services/auth-guard.service";
@@ -8,13 +7,10 @@ import { AdminOrdersComponent } from "./components/admin-orders/admin-orders.com
 import { AdminProductsComponent } from "./components/admin-products/admin-products.component";
 import { ProductFormComponent } from "./components/product-form/product-form.component";
 import { AdminAuthGuard } from "./services/admin-auth-guard.service";
-import { FormsModule } from "@angular/forms";
 
 @NgModule({
   imports: [
     SharedModule,
-    CommonModule,
-    FormsModule,
     RouterModule.forChild([
       {
         path: "admin/products/new",

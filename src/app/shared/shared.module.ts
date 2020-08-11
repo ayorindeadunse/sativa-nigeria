@@ -19,7 +19,6 @@ import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
   imports: [
     CommonModule,
     FormsModule,
-    //CustomFormsModule,
     DataTablesModule,
     AngularFireDatabaseModule,
     AngularFireAuthModule,
