@@ -1,3 +1,4 @@
+import { OrderService } from "src/app/shared/services/order.service";
 import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { FormsModule } from "@angular/forms";
@@ -41,6 +42,7 @@ import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
     CategoryService,
     ProductService,
     ShoppingCartService,
+    OrderService,
   ],
 })
 export class SharedModule {}
