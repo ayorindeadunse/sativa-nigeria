@@ -1,14 +1,11 @@
 import { NgModule } from "@angular/core";
 import { RouterModule } from "@angular/router";
-
-import { HomeComponent } from "src/app/core/components/home/home.component";
-import { LoginComponent } from "src/app/core/components/login/login.component";
 import { BsNavbarComponent } from "./components/bs-navbar/bs-navbar.component";
 import { SharedModule } from "src/app/shared/shared.module";
 
 @NgModule({
   imports: [SharedModule, RouterModule.forChild([])],
-  declarations: [BsNavbarComponent, HomeComponent, LoginComponent],
+  declarations: [BsNavbarComponent],
   exports: [BsNavbarComponent],
 })
 export class CoreModule {}
